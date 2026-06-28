@@ -1,0 +1,124 @@
+.status-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1rem 1.25rem 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+  backdrop-filter: blur(2px);
+  transition: background 0.3s ease;
+}
+
+.status-overlay.status-success {
+  background: linear-gradient(to top, rgba(0, 30, 12, 0.95) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+}
+
+.status-overlay.status-error {
+  background: linear-gradient(to top, rgba(30, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+}
+
+.status-overlay.status-warning {
+  background: linear-gradient(to top, rgba(30, 20, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 70%, transparent 100%);
+}
+
+.status-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.status-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.status-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.status-idle .status-text,
+.status-checking .status-text {
+  color: var(--text-secondary);
+}
+
+.status-success .status-text {
+  color: var(--color-accent);
+}
+
+.status-error .status-text {
+  color: var(--color-error);
+}
+
+.status-warning .status-text {
+  color: var(--color-warning);
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.member-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.member-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.member-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.detail-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.member-detail-divider {
+  color: var(--border-color);
+  font-size: 0.75rem;
+}
+
+.member-status-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.badge-active {
+  background: rgba(57, 255, 120, 0.15);
+  color: var(--color-accent);
+  border: 1px solid rgba(57, 255, 120, 0.3);
+}
+
+.badge-inactive {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-error);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
